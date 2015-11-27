@@ -1,0 +1,505 @@
+
+    <!--///////////////////////////////////////// PARALLAX BACKGROUND ////////////////////////////////////////-->
+
+    <!-- image is set in the CSS as a background image -->
+    <div id="parallax"></div>
+
+    <!--///////////////////////////////////////// end PARALLAX BACKGROUND ////////////////////////////////////////-->
+
+
+    
+    <!--/////////////////////////////////////// NAVIGATION BAR ////////////////////////////////////////-->
+
+    <section id="header">
+
+        <!-- Static navbar -->
+        <div class="navbar navbar-fixed-top" role="navigation">
+            <div class="container">
+           
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                    </button>
+              
+                    <!-- Logo goes here - replace the image with yours -->
+                    <a href="/" class="navbar-brand">
+                        <img src="<%=asset_path("logo.png")%>" class="logo-img img-responsive" alt="peganda" title="Peganda logo">
+                    </a>
+                </div>
+
+            <div class="navbar-collapse collapse nav-right">
+             
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Menu items go here -->
+                    <li class="active hidden"><a href="#home">Home</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#features">Why work with us</a></li>
+                   <!-- <li><a href="#info">Projects</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>  -->
+                    <li><a href="#faq">FAQ/Contact</a></li>
+                </ul>
+            </div>
+
+          </div>
+        </div>
+
+    </section>
+
+    <!--//////////////////////////////////////// end NAVIGATION BAR ////////////////////////////////////////-->
+
+    <!--/////////////////////////////////////// HERO SECTION ////////////////////////////////////////-->
+
+    <section id="hero">
+
+        <div class="container">
+            <div class="row">
+
+
+                <div class="col-md-6 intro">
+                    <p class="lead">We create awesome web applications!</p>
+                    <a href="#features" class="btn btn-hg btn-primary">Learn More</a>
+                </div>
+
+            </div><!-- /row -->
+        </div><!-- /container -->
+
+    </section>
+
+    <!--///////////////////////////////////////////////// end HERO SECTION ////////////////////////////////////////-->
+
+
+
+    <!--/////////////////////////////////////// FEATURES SECTION ////////////////////////////////////////-->
+
+    <section id="features">
+
+        <div class="container">
+
+            <header>
+                <h1>Working with us is different</h1>
+                <p class="lead">We focus on providing high-end services.</p>
+            </header>
+
+            <div class="row">
+                
+                <!-- Feature Item 1 -->
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">
+                        <img src="<%=asset_path("key.svg")%>" alt="" title="" />
+                    </div>
+                    <h4>Prototype in 3 weeks</h4>
+                    <p>You have an idea, but you want to get feedback and see how it works before you commit to it. In one week, you will have a working prototype.</p>
+                </div>
+
+                <!-- Feature Item 2 -->
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">
+                        <img src="<%=asset_path("magic.svg")%>" alt="" title="" />
+                    </div>
+                    <h4>Beta Launch in 3 Months</h4>
+                    <p>From an idea to a working project. We take care of everything: discovery, storycarding, wireframing, usability, design, coding, testing, deployment, servers...</p>
+                </div>
+
+                <!-- Feature Item 3 -->
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">
+                        <img src="<%=asset_path("rocket.svg")%>" alt="" title="" />
+                    </div>
+                    <h4>Launch review</h4>
+                    <p>Let us check it out for you one last time. Security audit, code review, usability, deployment; you name it.</p>
+                </div>
+
+            </div><!-- /row -->
+        </div><!-- /container -->
+
+    </section>
+
+    <!--/////////////////////////////////////// end FEATURES SECTION ////////////////////////////////////////-->
+
+
+    <!--//////////////////////////////////////// NEWSLETTER SECTION ////////////////////////////////////////-->
+
+    <section id="newsletter">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6">
+                    <p class="lead">Stay in the loop with our newsletter!</p>
+                </div>
+                
+                <div class="col-md-6">
+
+                    <!--////////// Newsletter Form //////////-->
+                     <%= form_tag(send_mail_path) do %>
+                        <div class="input-group">
+                          <input type="text" name="email" id="email" class="form-control input-hg">
+                          <span class="input-group-btn">
+                            <button class="btn btn-inverse btn-hg" type="submit" name="submit">Sign Up</button>
+                          </span>
+                        </div><!-- /input-group -->
+                    <% end %>
+                    <!--////////// end of Newsletter Form ///////////-->
+
+                     <div id="error-info"></div><!-- Error notification for newsletter signup form -->
+
+                </div>
+
+            </div><!-- /row -->
+        </div><!-- /container -->
+
+      
+
+    </section>
+    
+    <!--//////////////////////////////////////// end NEWSLETTER SECTION ////////////////////////////////////////-->
+
+
+
+
+
+    <!--
+
+    <section id="info">
+
+       
+        <div class="info-section-white">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 pull-right gallery-popup">
+                        <a href="http://www.placehold.it/640x480"><img src="<%=asset_path("suppliers-portal.png")%>" alt="placeholder image" title="placeholder image" class="img-responsive"></a>
+                    </div> 
+
+                    <div class="col-md-6 pull-left">
+                        <h3>Suppliers Portal</h3>
+
+                        <p class="lead">Supplier management system.</p>
+
+                        <p>From publish RFQ's to manage financial and fiscal information of your suppliers. This system also provides  <span class="tooltip-trigger" data-toggle="tooltip" title="Suppliers can upload their invoices to the portal">invoicing and order management</span>. This provides your company with a big cost reduction on supplier management.</p>
+
+                     
+                        
+                        <a href="#faq" class="btn btn-primary btn-hg">Tell Me More!</a>
+                        
+                    </div> 
+
+                </div><
+            </div>
+
+        </div> 
+        
+
+
+          <div class="info-section-gray">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 pull-right gallery-popup">
+                        <a href="http://www.sabiamujer.com"><img src="<%=asset_path("sabiamujer.png")%>" alt="sabiamujer" title="sabiamujer.com el portal de necesidades y servicios para mujeres" class="img-responsive"></a>
+                    </div> 
+
+                    <div class="col-md-6 pull-left">
+                        <h3>Sabiamujer </h3>
+
+                        <p class="lead">A web solution for woman who need extra income</p>
+
+                        <p>This social website solution connects woman who needs extra income with other woman who need help with daily tasks.</p>
+
+                       
+                        
+                        <a href="#faq" class="btn btn-primary btn-hg">I wan to know more...</a>
+                       
+                    </div> 
+
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+
+    -->
+
+
+
+    <!--
+
+    <section id="testimonials">
+
+        <div class="container">
+            <div class="row">
+
+          
+                <div id="testimonials-slider" class="carousel slide">
+                    <ol class="carousel-indicators">
+                        <li data-target="#testimonials-slider" data-slide-to="0" class="active"></li>
+                        <li data-target="#testimonials-slider" data-slide-to="1"></li>
+                    </ol>
+                    
+                  
+                    <div class="carousel-inner">
+                    
+                
+                        <div class="active item">
+
+                            <div class="col-md-2 col-md-offset-1">
+
+                                <div class="quote-icon">
+                                    <img src="<%=asset_path("carol-duncumb.jpg")%>" alt="Carol Duncumb" title="Carol Duncumb testimonial" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-8">
+                                <p class="lead">Well... honestly it doesn't get much better than this! These guys know what they're doing!</p>
+                                <cite>Carol Duncumb, <a href="#">NED, Mattiolli Woods</a></cite>
+                            </div>
+
+                        </div>
+
+                       
+                        <div class="item">
+
+                            <div class="col-md-2 col-md-offset-1">
+
+                                <div class="quote-icon">
+                                    <img src="<%=asset_path("pedro-angel-garcia.jpg")%>" alt="Pedro Angel García" title="Pedro Angel Garcia testimonial" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-8">
+                                <p class="lead">If i had to do it again, i'd definitely go with the same team - that was an amazing experience.</p>
+                                <cite>Pedro Angel García, <a href="www.azkar.com">CEO, Transportes Azkar</a></cite>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                    
+                    <a class="carousel-control left" href="#testimonials-slider" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                    <a class="carousel-control right" href="#testimonials-slider" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+    -->
+
+
+
+    <!--/////////////////////////////////////// FAQ SECTION ////////////////////////////////////////-->
+
+    <section id="faq">
+
+        <div class="container">
+
+            <header>
+                <h1>F.A.Q.</h1>
+                <p class="lead">You have a question? Someone else might have had the exact same one. Let's find out!</p>
+            </header>
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <!--////////// Accordion Toggle //////////-->
+                    <div class="panel-group" id="accordion">
+                     
+                        <!-- PANEL 1 -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                    Why are developments done so fast?
+                                    </a>
+                                </h4>
+                            </div>
+                            
+                            <div id="collapseOne" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>We use agile methodologies and our technology and knowledge allow us to develop a prototype is a few weeks.</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- PANEL 2 -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                    What technologies do you use?
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>Every case is different but mainly we use  <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a> development framework with a bunch of other web technologies. These technologies allow us to develop strong and scalabe web applications. Other technologies we use include ruby, node.js, Sass, memcache, redis...<br>We study every case individualy in order to decide with technology is the best for your purpose.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PANEL 3 -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                    What is the cost of a prototype?
+                                    </a>
+                                </h4>
+                            </div>
+                            
+                            <div id="collapseThree" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>Normally a prototype is fully develop in three weeks and it costs around 2.500 pounds. This allows your idea to be realized in a website at a fraction of the cost of full development. If we move forward with the project, we will requote full development cost minus this initial investment.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                    </div> 
+                    <!--////////// end of Accordion Toggle //////////-->              
+
+                    <div class="alert">
+                        
+                        <p class="lead">Our Contact Details</p>
+                        <div class="row">
+                          
+                          <div class="col-md-4 col-xs-6 text-left">
+                            <strong>Address</strong>
+                          </div>
+                          
+                          <div class="col-md-8 col-xs-6">
+                            <address>
+                              7 Portland Mews, Brighton, East Sussex, BN2 1EQ<br>
+                            </address>
+                          </div>
+
+                        </div><!-- /row -->
+
+                        <div class="row">
+                          
+                          <div class="col-md-4 col-xs-6 text-left">
+                            <strong>Phone Number</strong>
+                          </div>
+                          
+                          <div class="col-md-8 col-xs-6">
+                            <address>
+                              +44 (0) 1273 780 750<br>
+                            </address>
+                          </div>
+
+                        </div><!-- /row -->
+
+                        <div class="row">
+                          
+                          <div class="col-md-4 col-xs-6 text-left">
+                            <strong>Mobile Number</strong>
+                          </div>
+                          
+                          <div class="col-md-8 col-xs-6">
+                            <address>
+                              +44 (0) 794 647 4628<br>
+                            </address>
+                          </div>
+
+                        </div><!-- /row -->
+
+                    </div><!-- /alert -->
+
+                </div><!-- /col-md-6 -->
+
+                <div class="col-md-6">
+
+                    <div class="row contact-intro">
+                        <div class="col-md-3 text-right"><img src="<%=asset_path("support.svg")%>" alt="" title="" /></div>
+                        <div class="col-md-9"><p class="lead">Didn't find what you were looking for? Shoot us a line!</p></div>                        
+                    </div>
+
+
+
+
+
+                    <!--////////// CONTACT FORM //////////-->
+
+
+                     <div id="contact-error">
+
+                        <div>
+                                  <% flash.each do |key, value| %>
+                                    <div>
+                                      <a href="#" data-dismiss="alert">×</a>
+                                        <%= value %>
+                                    </div>
+                                  <% end %>
+                                </div>
+
+
+                     </div>
+
+  <!--////////// CONTACT FORM //////////-->
+                 
+
+                       <%= simple_form_for :contact, url: new_contact_path do |f| %> 
+                      
+                           <%= f.text_field :name, :required => true, :class=> ' form-control input-hg', :placeholder => 'Your name'%>
+                           <%= f.text_field :email, :required => true, :class=> ' form-control input-hg', :placeholder => 'Your email'%>
+
+                           <%= f.text_area :message, :class=> 'form-control input-hg', :placeholder => 'Your message'%>
+                        
+                      <button type="submit" class="btn btn-inverse btn-hg btn-block" name="submit">Send</button>
+
+                   <% end %>
+
+
+                    <!--////////// end CONTACT FORM ///////////-->
+
+                </div><!-- /col-md-6-->
+                
+            </div>
+        </div>
+
+    </section>
+
+    <!--/////////////////////////////////////// end FAQ SECTION ////////////////////////////////////////-->
+
+
+
+    <!--//////////////////////////////////////// FOOTER SECTION ////////////////////////////////////////-->
+    <section id="footer">
+        <div class="bottom-menu-inverse">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Copyright &copy; 2014  <a href="http://peganda.com" target="_blank">Peganda</a>.</p>
+                    </div>
+
+                    <div class="col-md-6 social">
+                        <ul class="bottom-icons">
+                            <li>
+                              <a href="https://www.facebook.com/peganda" class="fui-facebook"></a>
+                            </li>
+                             <li>
+                              <a href="https://twitter.com/peganda" class="fui-twitter"></a>
+                            </li>
+                            
+                             <li>
+                              <a href="https://plus.google.com/u/0/103362214246545412774/about/p/pub" class="fui-googleplus"></a>
+                            </li>
+                            
+                          </ul>                      
+                    </div>
+                </div>
+            
+            </div><!-- /row -->
+        </div><!-- /container -->
+
+    </section>
+
+    <!--//////////////////////////////////////// end FOOTER SECTION ////////////////////////////////////////-->
