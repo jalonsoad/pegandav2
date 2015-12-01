@@ -10,7 +10,7 @@ set :keep_releases, 3
 
 # deploy with git
 set :scm, :git
-set :repo_url, 'git@github.com:jalonsoad/pegandaV2.git'
+set :repository, 'git@github.com:jalonsoad/pegandaV2.git'
 set :branch, "master"
 set :scm_verbose, true
 set :user, "deploy"
