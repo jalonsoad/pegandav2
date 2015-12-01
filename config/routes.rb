@@ -16,6 +16,9 @@ Rails.application.routes.draw do
    resources "contacts", only: [:new, :create]
 
    
+   match "/404" => "errors#error404", via: [ :get, :post, :patch, :delete ]
+
+   
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
