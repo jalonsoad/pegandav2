@@ -1,13 +1,11 @@
 set :application, 'pegandaV2'
-set :deploy_user, 'deploy'
 set :host, "146.255.96.152"
 
-set :ssh_options, {:forward_agent => true}
-set :default_run_options, {:pty => true}
-set :stages, ["production"]
-set :default_stage, "production"
-set :use_sudo, true
 
+set :deploy_to, '/var/www/vhost/#{application}'
+set :deploy_via, :remote_cache
+set :use_sudo, false
+set :keep_releases, 3
 
 
 # deploy with git
@@ -20,19 +18,12 @@ ssh_options[:forward_agent] = true
 default_run_options[:pty] = true
 
 
-server "www.peganda.com", :app, :web, :db, :primary => true
+
+
+#server "www.peganda.com", :app, :web, :db, :primary => true
 role :web, "146.255.96.152"  # Your HTTP server, Apache/etc
 role :app, "146.255.96.152"  # This may be the same as your `Web` server
 role :db,  "146.255.96.152", :primary => true  # This is where Rails migrations will run
-
-
-
-
-set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
-
-set :deploy_to, '/var/www/vhost/#{application}'
-set :deploy_via, :remote_cache
-set :keep_releases, 3
 
 
 namespace :deploy do
@@ -51,3 +42,9 @@ namespace :deploy do
 end
 
 
+
+#set :ssh_options, {:forward_agent => true}
+#set :default_run_options, {:pty => true}
+#set :stages, ["production"]
+#set :default_stage, "production"
+#set :deploy_user, 'deploy'
