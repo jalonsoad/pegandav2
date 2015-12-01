@@ -26,20 +26,36 @@ role :app, "146.255.96.152"  # This may be the same as your `Web` server
 role :db,  "146.255.96.152", :primary => true  # This is where Rails migrations will run
 
 
-namespace :deploy do
-  task :start do ; end
-  task :stop do ; end
-  desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      execute :mkdir, '-p', "#{ release_path }/tmp"
-     execute :touch, release_path.join('tmp/restart.txt')
-    end
-  end
 
-  after :publishing, 'deploy:restart'
-  after :finishing, 'deploy:cleanup'
-end
+
+# if you want to clean up old releases on each deploy uncomment this:
+after "deploy:restart", "deploy:cleanup"
+
+
+# If you are using Passenger mod_rails uncomment this:
+ namespace :deploy do
+   task :start do ; end
+   task :stop do ; end
+   task :restart, :roles => :app, :except => { :no_release => true } do
+     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+   end
+ end
+
+
+#namespace :deploy do
+#  task :start do ; end
+#  task :stop do ; end
+#  desc 'Restart application'
+#  task :restart do
+#    on roles(:app), in: :sequence, wait: 5 do
+#      execute :mkdir, '-p', "#{ release_path }/tmp"
+#     execute :touch, release_path.join('tmp/restart.txt')
+#    end
+#  end
+
+#  after :publishing, 'deploy:restart'
+#  after :finishing, 'deploy:cleanup'
+#end
 
 
 
