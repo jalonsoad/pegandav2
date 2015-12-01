@@ -2,7 +2,7 @@ set :application, "peganda.com"
 set :host, "146.255.96.152"
 
 
-set :deploy_to, '/var/www/vhost/#{application}'
+set :deploy_to, '/var/www/vhosts/#{application}'
 set :deploy_via, :remote_cache
 set :use_sudo, false
 set :keep_releases, 3
