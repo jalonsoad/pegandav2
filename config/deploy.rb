@@ -1,4 +1,4 @@
-set :application, 'pegandaV2'
+set :application, "peganda.com"
 set :host, "146.255.96.152"
 
 
