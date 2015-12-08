@@ -8,6 +8,11 @@
         <meta name="description" content="Apeganda es una empresa líder en ofrecer soluciones de contabilidad y asesoría financiera  online. Nuestros sistemas son flexibles y fáciles de utilizar" />
     
 
+
+          <%= stylesheet_link_tag 'application',  media: 'all', 'data-turbolinks-track' => true %>
+          <%= javascript_include_tag 'application',  'data-turbolinks-track' => false %>
+         <%= csrf_meta_tags %>
+
         <!-- The main CSS file -->
         <link href="css/main.css" rel="stylesheet">
 
@@ -34,6 +39,8 @@
 
 
     <!--//////////////////////////////////////// JAVASCRIPT LOAD ////////////////////////////////////////-->
+
+ <%= render 'cookies_eu/consent_banner' %>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

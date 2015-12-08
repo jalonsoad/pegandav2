@@ -11,18 +11,4 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require jquery-1.8.3.min.js
-//= require jquery-ui-1.10.3.custom.min.js
-//= require jquery.ui.touch-punch.min.js
-//= require bootstrap.min.js
-//= require jquery.isotope.min.js
-//= require jquery.magnific-popup.js
-//= require jquery.fitvids.min.js
-//= require bootstrap-select.js
-//= require bootstrap-switch.js
-//= require flatui-checkbox.js
-//= require flatui-radio.js
-//= require jquery.tagsinput.js
-//= require custom.js
+//= require cookies_eu
