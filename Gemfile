@@ -25,7 +25,7 @@ gem 'cookies_eu'
 gem 'mail_form'
 gem 'simple_form'
 
-#gem 'capistrano', '2.15.0'
+gem 'capistrano', '2.15.6'
 #gem 'capistrano-passenger'
 
 
